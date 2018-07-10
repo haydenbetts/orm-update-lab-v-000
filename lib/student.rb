@@ -30,6 +30,8 @@ class Student
   end
 
   def save
+    sql = <<-SQL
+    SQL
 
     self.id = DB[:conn].execute("SELECT id FROM students WHERE id = MAX(id)")
   end
