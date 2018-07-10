@@ -39,4 +39,7 @@ class Student
     self.id = DB[:conn].execute("SELECT MAX(id) FROM students")[0][0]
   end
 
+  def update
+  end
+
 end
