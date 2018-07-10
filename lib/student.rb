@@ -41,7 +41,7 @@ class Student
 
   def update
     sql = <<-SQL
-      INSERT INTO students (name, grade)
+      UPDATE students (name, grade)
       VALUES (?, ?)
     SQL
 
