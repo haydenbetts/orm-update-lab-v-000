@@ -35,6 +35,7 @@ class Student
       VALUES (self.name, self.grade)
     SQL
 
+    DB[:conn].execute(sql)
     self.id = DB[:conn].execute("SELECT id FROM students WHERE id = MAX(id)")
   end
 
