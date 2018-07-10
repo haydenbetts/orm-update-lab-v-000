@@ -31,6 +31,8 @@ class Student
 
   def save
     sql = <<-SQL
+      INSERT INTO students (name, grade)
+      VALUES (self.name, self.grade)
     SQL
 
     self.id = DB[:conn].execute("SELECT id FROM students WHERE id = MAX(id)")
