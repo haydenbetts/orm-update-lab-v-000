@@ -29,7 +29,9 @@ class Student
     DB[:conn].execute(sql)
   end
 
-  def self.save
+  def save
+
+    student.id
   end
 
 end
