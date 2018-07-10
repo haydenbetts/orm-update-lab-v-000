@@ -31,7 +31,7 @@ class Student
 
   def save
 
-    student.id
+    self.id = DB[:conn].execute("SELECT id FROM students WHERE id = MAX(id)")
   end
 
 end
