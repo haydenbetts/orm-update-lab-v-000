@@ -69,7 +69,8 @@ class Student
       WHERE name = ?
       LIMIT 1;
     SQL
-    DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name)[0]
+
   end
 
 end
