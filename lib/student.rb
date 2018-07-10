@@ -71,6 +71,7 @@ class Student
     SQL
     row = DB[:conn].execute(sql, name)[0]
 
+
   end
 
 end
